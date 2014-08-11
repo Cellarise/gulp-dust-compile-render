@@ -1,0 +1,5 @@
+//jshint ignore:start
+var author = "{author}";
+var name = "{name}";
+var description = "{description}";
+{>simple/}
