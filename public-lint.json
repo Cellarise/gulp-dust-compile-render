@@ -1,0 +1,56 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2014-08-12T03:20:32.486Z",
+    "end": "2014-08-12T03:20:32.487Z",
+    "duration": 1
+  },
+  "failures": [],
+  "passes": [
+    {
+      "title": "JSHint: index.js",
+      "fullTitle": "JSHint: ..\\lib\\index.js",
+      "duration": 0
+    },
+    {
+      "title": "JSHint: complex.js",
+      "fullTitle": "JSHint: ..\\Test\\resources\\complex.js",
+      "duration": 0
+    },
+    {
+      "title": "JSHint: simple.js",
+      "fullTitle": "JSHint: ..\\Test\\resources\\simple.js",
+      "duration": 0
+    },
+    {
+      "title": "JSHint: test.js",
+      "fullTitle": "JSHint: ..\\Test\\test.js",
+      "duration": 0
+    },
+    {
+      "title": "JSHint: dust-steps.js",
+      "fullTitle": "JSHint: ..\\Test\\unit\\dust-steps.js",
+      "duration": 0
+    },
+    {
+      "title": "JSHint: build.js",
+      "fullTitle": "JSHint: ..\\tasks\\build.js",
+      "duration": 0
+    },
+    {
+      "title": "JSHint: build.js",
+      "fullTitle": "JSHint: ..\\tasks\\private\\build.js",
+      "duration": 0
+    },
+    {
+      "title": "JSHint: testUpdate.js",
+      "fullTitle": "JSHint: ..\\tasks\\private\\testUpdate.js",
+      "duration": 0
+    }
+  ],
+  "skipped": []
+}
