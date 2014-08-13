@@ -8,8 +8,8 @@
         "url": "git://github.com/Cellarise/gulp-dust-compile-render.git"
     },
     "config": {
-        "build": "2",
-        "buildTimestamp": "2014-08-13T10:49:24.805+10:00",
+        "build": "3",
+        "buildTimestamp": "2014-08-13T11:03:58.127+10:00",
         "adminEmail": "admin@cellarise.com"
     },
     "dependencies": {
