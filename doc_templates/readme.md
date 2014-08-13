@@ -1,7 +1,7 @@
 # gulp-dust-compile-render
 [![view on npm](http://img.shields.io/npm/v/gulp-dust-compile-render.svg)](https://www.npmjs.org/package/gulp-dust-compile-render)
 [![npm module downloads per month](http://img.shields.io/npm/dm/gulp-dust-compile-render.svg)](https://www.npmjs.org/package/gulp-dust-compile-render)
-[![Dependency Status](https://david-dm.org/Cellarise/gulp-dust-compile-render)](https://david-dm.org/Cellarise/gulp-dust-compile-render)
+[![Dependency Status](https://david-dm.org/Cellarise/gulp-dust-compile-render.svg)](https://david-dm.org/Cellarise/gulp-dust-compile-render)
 
 > A gulp task to compile and render dust templates based on a provided context object.
 
