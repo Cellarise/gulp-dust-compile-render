@@ -33,10 +33,12 @@ A gulp task to compile and render dust templates based on a provided context obj
 - opts `Object` - Task configuration options  
   - \[partialsGlob\] `string` - A glob pattern for the dust templates to be loaded as partials that can be referenced in dust templates  
   - \[preserveWhitespace\] `boolean` - Preserve whitespace in output  
+  - \[ignoreUndefinedTags\] `boolean` - Ignore dust tags undefined in the context object.
+Does not work with paths e.g. obj.subobj  
 
 **Returns**: `readable-stream/transform`  
 **Example**  
-Given the dust file:
+ Given the dust file:
 
 ```js
 //jshint ignore:start
@@ -65,6 +67,7 @@ var name = "gulp-dust-compile-render";
 var description = "A gulp task to compile and render dust templates based on a provided context object.";
 var version = "0.0.0";
 ```
+
 
 
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*.

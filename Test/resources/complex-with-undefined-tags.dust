@@ -1,0 +1,6 @@
+//jshint ignore:start
+//@param {object}
+var author = "{author}";
+var name = "{name}";
+var description = "{description}";
+{>simple/}
