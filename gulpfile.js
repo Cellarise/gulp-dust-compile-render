@@ -6,6 +6,3 @@ require('gulp-load')(gulp);
 // load tasks from tasks directory and
 // dependencies of start with `gulp-` in package.json
 gulp.loadTasks(__dirname);
-
-// run tasks
-gulp.task('default', ['build']);
