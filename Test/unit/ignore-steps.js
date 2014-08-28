@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var path = require('path');
 var GulpDustCompileRender = require('../../lib');
 var English = require('yadda').localisation.English;
+var assert = require('assert');
 
 /* Feature: Ignore dust tags with no context property */
 module.exports = (function() {
@@ -12,7 +13,7 @@ module.exports = (function() {
     /*Scenario: Compile and render template with ignore undefined tags flag set */
         .define("Given I have a $name dust file", function(filename, done) {
             this.world.template = path.join(__dirname, '../resources/' + filename);
-            this.assert(fs.existsSync(this.world.template + '.dust'));
+            assert(fs.existsSync(this.world.template + '.dust'));
             done();
         })
         .define("When I compile and render the dust file using $context as context with the ignore undefined tags flag set", function(context, done) {
@@ -32,7 +33,7 @@ module.exports = (function() {
                 });
         })
         .define("Then a rendered dust file is output ignoring undefined dust tags", function(done) {
-            this.assert.equal(this.world.streamResult.join(''),
+            assert.equal(this.world.streamResult.join(''),
                 fs.readFileSync(this.world.template + ".js", "UTF-8"));
             done();
         });
