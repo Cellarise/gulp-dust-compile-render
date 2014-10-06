@@ -6,6 +6,7 @@ require('gulp-load-params')(gulp, {modulePrefix: 'gulp-tasks'});
 // setup context object to be passed to gulp tasks
 var cwd = process.cwd();
 var context = {
+    argv: [],
     cwd: cwd,
     package: require(cwd + '/package.json')
 };

@@ -1,17 +1,16 @@
-/* jslint node: true */
-"use strict";
-var concat = require("gulp-concat");
-var path = require('path');
-var jsdoc2md = require("gulp-jsdoc-to-markdown");
-var GulpDustCompileRender = require('gulp-dust-compile-render');
-
 /**
  * A gulp build task to generate JSDoc documentation, license documentation, and README file.
  * Dependent on gulp build task `docs-pre`.
  * @alias tasks:docs
  */
 module.exports = function(gulp, context) {
-    gulp.task("docs", function(){
+    "use strict";
+    var concat = require("gulp-concat");
+    var path = require('path');
+    var jsdoc2md = require("gulp-jsdoc-to-markdown");
+    var GulpDustCompileRender = require('gulp-dust-compile-render');
+
+    gulp.task("docs", ['docs-pre'], function(){
         var cwd = context.cwd;
         var pkg = context.package;
         var directories = pkg.directories;

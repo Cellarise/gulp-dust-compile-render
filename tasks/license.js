@@ -1,14 +1,15 @@
-/* jslint node: true */
-"use strict";
-var checker = require('npm-license');
-var GulpDustCompileRender = require('gulp-dust-compile-render');
-var rename = require("gulp-rename");
-
 /**
  * A gulp build task to generate license documentation from all dependent packages.
+ * The license data is automatically sourced from node_package folder using `npm-license`.
+ * The result is saved to `doc/templates/readme-license.dust.md`.
  * @alias tasks:license
  */
 module.exports = function (gulp, context) {
+    "use strict";
+    var checker = require('npm-license');
+    var GulpDustCompileRender = require('gulp-dust-compile-render');
+    var rename = require("gulp-rename");
+
     gulp.task('license', function () {
         var pkg = context.package;
         var directories = pkg.directories;
@@ -39,9 +40,6 @@ module.exports = function (gulp, context) {
                                     license: JSON.stringify(dependencies[dep].licenses),
                                     repository: JSON.stringify(dependencies[dep].repository)
                                 };
-                                //if (dependencies[dep] instanceof Array){
-                                //    result.repository
-                                //}
                                 pkg.licenses.push(result);
                             }
                         }
