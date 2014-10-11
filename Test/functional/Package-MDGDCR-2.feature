@@ -1,4 +1,4 @@
-Feature: Compile and render dust templates
+Feature: Package: Add compile and render dust template functions
   As a developer
   I can compile and render dust templates as a gulp task
   So that I can easily integrate use of dust templates into my build process

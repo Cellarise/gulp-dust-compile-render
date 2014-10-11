@@ -1,11 +1,12 @@
-/* jslint node: true */
 /* global featureFile, scenarios, steps */
 "use strict";
 
 var path = require('path');
 var _ = require('underscore');
 var glob = require('glob');
+var Yadda = require('yadda');
 
+//setup paths
 var cwd = process.cwd();
 var directories = require(cwd + '/package.json').directories;
 var testFeatures = cwd + path.sep + directories.test + path.sep;
@@ -20,19 +21,14 @@ if(process.env.hasOwnProperty('YADDA_FEATURE_GLOB')){
     });
 }
 
-var context = { world: {} };
-var Yadda = require('yadda');
-Yadda.plugins.mocha.StepLevelPlugin.init();
-
-//helper function to prepare multiple libraries for loading into the yadda interpreter
-function require_libraries(libraries) {
-    function require_library(libraries, library) {
-        return libraries.concat(require(library));
-    }
-    return libraries.reduce(require_library, []);
-}
+//setup logger
+var bformat = require('bunyan-format');
+var formatOut = bformat({ outputMode: 'short' });
+var logger = require('bunyan').createLogger({name: 'TEST', stream: formatOut});
 
 //execute all unit test feature files
+var context = { world: { logger: logger } };
+Yadda.plugins.mocha.StepLevelPlugin.init();
 new Yadda.FeatureFileSearch([testFeatures]).each(function(file) {
     //check if in glob
     if(tstGlob.length === 0 || _.contains(tstGlob, file)){
@@ -42,8 +38,8 @@ new Yadda.FeatureFileSearch([testFeatures]).each(function(file) {
         var featureLibraryDefault = file.replace(/\..+$/, '') + "-steps.js";
 
         featureFile(file, function(feature) {
-            var loaded_libraries,
-                libraries = [];
+            var loadedLibraries;
+            var libraries = [];
 
             if(feature.annotations.libraries !== undefined){
                 //load any libraries annotated in the feature file
@@ -52,9 +48,17 @@ new Yadda.FeatureFileSearch([testFeatures]).each(function(file) {
                 });
             }
             libraries.push(featureLibraryDefault); //add default library
-            loaded_libraries = require_libraries(libraries);
 
-            var yadda = new Yadda.Yadda(loaded_libraries, context);
+            //helper function to prepare multiple libraries for loading into the yadda interpreter
+            function requireLibraries(libraries) {
+                function requireLibrary(libraries, library) {
+                    return libraries.concat(require(library));
+                }
+                return libraries.reduce(requireLibrary, []);
+            }
+            loadedLibraries = requireLibraries(libraries);
+
+            var yadda = new Yadda.Yadda(loadedLibraries, context);
             scenarios(feature.scenarios, function(scenario) {
                 steps(scenario.steps, function(step, done) {
                     yadda.yadda(step, done);

@@ -9,6 +9,25 @@
    </tr>
 
   <tr>
+    <td colspan=4><strong>Version: 0.1.11 - released 2014-10-12</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Non-functional</td> 
+    <td style="width:80px;text-align:left;">MDGDCR-13</td>
+    <td>Package: Update package dependencies</td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Feature</td> 
+    <td style="width:80px;text-align:left;">MDGDCR-11</td>
+    <td>Package: Remove all gulp tasks except &#39;test&#39; and update readme docs</td>
+   </tr>
+
+
+  <tr>
     <td colspan=4><strong>Version: 0.1.10 - released 2014-10-06</strong></td>
    </tr>
 

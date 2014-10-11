@@ -1,4 +1,4 @@
-Feature: Ignore dust tags with no context property
+Feature: Render: Ignore dust tags with no context property
   As a developer
   I can select to ignore dust tags with no context property
   So that I do not have to escape content in dust templates that are not meant to be rendered

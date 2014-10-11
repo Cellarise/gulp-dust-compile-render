@@ -1,6 +1,7 @@
 /**
  * The default gulp build task. The following tasks are executed in sequence:
- * ['test', 'docs']
+ * ['test']
+ * @param gulp {gulp} - The gulp module
  * @alias tasks:default
  */
 module.exports = function(gulp) {
@@ -10,7 +11,6 @@ module.exports = function(gulp) {
     gulp.task('default', function(cb) {
         runSequence(
             'test',
-            'docs',
             cb);
     });
 };
