@@ -5,22 +5,23 @@ A gulp task to compile and render dust templates based on a provided context obj
 
 **Params**
 
-- context `Object` - Context object containing properties referenced in dust templates.NOTE: the context object will be set upon instantiating the function.  Pass an object as the context and add properties to the object postinstantiating the function but prior to executing the gulp pipe.  
+- context `Object` - Context object containing properties referenced in dust templates.NOTE: the context object will be set upon instantiating the function.Pass an object as the context and add properties to the object postinstantiating the function but prior to executing the gulp pipe.  
 - opts `Object` - Task configuration options  
-  - \[partialsGlob\] `string` - A glob pattern for the dust templates to be loaded as partials that can be referenced in dust templates  
+  - \[partialsGlob\] `string` - A glob pattern for the dust templates to be loaded as partialsthat can be referenced in dust templates  
   - \[preserveWhitespace\] `boolean` - Preserve whitespace in output  
   - \[ignoreUndefinedTags\] `boolean` - Ignore dust tags undefined in the context object.Does not work with paths e.g. obj.subobj  
 
-**Returns**: `readable-stream/transform`  
+**Type**: `name`  
+**Returns**: `through2` - readable-stream/transform  
 **Example**  
  Given the dust file:
 
 ```js
 //jshint ignore:start
-var author = "{author}";
-var name = "{name}";
-var description = "{description}";
-var version = "{version}";
+var author = "{~lb}author{~rb}";
+var name = "{~lb}name{~rb}";
+var description = "{~lb}description{~rb}";
+var version = "{~lb}version{~rb}";
 ```
 
 When you pass the dust file to a `new GulpDustCompileRender()` using 'package.json' as context, and pipe it to a given destination.

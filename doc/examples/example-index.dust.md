@@ -2,10 +2,10 @@
 
 ```js
 //jshint ignore:start
-var author = "{~lb}author{~rb}";
-var name = "{~lb}name{~rb}";
-var description = "{~lb}description{~rb}";
-var version = "{~lb}version{~rb}";
+var author = "{~lb}~lb{~rb}author{~lb}~rb{~rb}";
+var name = "{~lb}~lb{~rb}name{~lb}~rb{~rb}";
+var description = "{~lb}~lb{~rb}description{~lb}~rb{~rb}";
+var version = "{~lb}~lb{~rb}version{~lb}~rb{~rb}";
 ```
 
 When you pass the dust file to a `new GulpDustCompileRender()` using 'package.json' as context, and pipe it to a given destination.
