@@ -9,6 +9,18 @@
   </tr>
     
       <tr>
+        <td colspan=4><strong>Version: 0.1.13 - released 2014-11-16</strong></td>
+      </tr>
+        
+          <tr>
+            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
+            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDGDCR-16</td>
+            <td>Package: dustjs-helpers are not loaded</td>
+          </tr>
+        
+    
+      <tr>
         <td colspan=4><strong>Version: 0.1.12 - released 2014-11-14</strong></td>
       </tr>
         
