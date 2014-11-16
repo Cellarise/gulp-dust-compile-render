@@ -1,0 +1,6 @@
+/*eslint-disable*/
+var author = "{author}";
+var name = "{name}";
+var description = "{description}";
+var computedValue="{@math key="16" method="add" operand="4"/}";
+{>simple/}

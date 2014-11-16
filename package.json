@@ -2,7 +2,7 @@
   "author": "John Barry",
   "name": "gulp-dust-compile-render",
   "description": "A gulp task to compile and render dust templates based on a provided context object.",
-  "version": "0.1.13",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/Cellarise/gulp-dust-compile-render.git"
@@ -13,17 +13,17 @@
       "stats": {
         "lines": {
           "pctSkipped": 0,
-          "pct": 91,
+          "pct": 89,
           "colour": "green"
         },
         "branches": {
           "pctSkipped": 0,
-          "pct": 60,
+          "pct": 64,
           "colour": "yellow"
         },
         "statements": {
           "pctSkipped": 0,
-          "pct": 91,
+          "pct": 89,
           "colour": "green"
         },
         "functions": {
@@ -40,15 +40,16 @@
         }
       }
     },
-    "build": "43",
-    "buildTimestamp": "2014-11-16T09:22:08.331+10:00"
+    "build": "45",
+    "buildTimestamp": "2014-11-16T10:51:38.640+10:00"
   },
   "main": "./lib",
   "dependencies": {
-    "gulp-util": "^3.0.0",
     "dustjs-linkedin": "^2.3.4",
-    "through2": "^0.6.3",
+    "dustjs-helpers": "^1.4.0",
     "glob": "^4.0.5",
+    "gulp-util": "^3.0.0",
+    "through2": "^0.6.3",
     "underscore": "^1.6.0"
   },
   "optionalDependencies": {},

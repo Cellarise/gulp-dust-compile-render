@@ -14,3 +14,10 @@ Feature: Package: Add compile and render dust template functions
     Given I have a complex dust file with partials
     When I compile and render the dust file using package.json as context
     Then a rendered dust file is output
+
+  @linked=MDGDCR-17
+  Scenario: Compile and render templates with dustjs-helpers
+
+    Given I have a complex-using-dustjs-helpers dust file
+    When I compile and render the dust file using package.json as context and with dustjs-helpers
+    Then a rendered dust file is output

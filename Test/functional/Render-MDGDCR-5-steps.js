@@ -12,7 +12,7 @@ module.exports = (function testSuite() {
   return English.library()
     /*Scenario: Compile and render template with ignore undefined tags flag set */
     .define("Given I have a $name dust file", function test(filename, done) {
-      this.world.template = path.join(__dirname, "../resources/" + filename);
+      this.world.template = path.join(__dirname, "../../Test_Resources/" + filename);
       assert(fs.existsSync(this.world.template + ".dust"));
       done();
     })
@@ -23,7 +23,7 @@ module.exports = (function testSuite() {
         gulp.src(this.world.template + ".dust")
           .pipe(new GulpDustCompileRender(JSON.parse(fs.readFileSync(context)), {
             "preserveWhitespace": true,
-            "partialsGlob": path.join(__dirname, "../resources/") + "*.dust*",
+            "partialsGlob": path.join(__dirname, "../../Test_Resources/") + "*.dust*",
             "ignoreUndefinedTags": true
           }))
           .on("data", function onData(vinyl) {

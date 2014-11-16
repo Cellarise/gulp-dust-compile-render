@@ -7,9 +7,10 @@ A gulp task to compile and render dust templates based on a provided context obj
 
 - context `Object` - Context object containing properties referenced in dust templates.NOTE: the context object will be set upon instantiating the function.Pass an object as the context and add properties to the object postinstantiating the function but prior to executing the gulp pipe.  
 - opts `Object` - Task configuration options  
-  - \[partialsGlob\] `string` - A glob pattern for the dust templates to be loaded as partialsthat can be referenced in dust templates  
-  - \[preserveWhitespace\] `boolean` - Preserve whitespace in output  
-  - \[ignoreUndefinedTags\] `boolean` - Ignore dust tags undefined in the context object.Does not work with paths e.g. obj.subobj  
+  - \[partialsGlob=""\] `string` - A glob pattern for the dust templates to be loaded as partialsthat can be referenced in dust templates  
+  - \[preserveWhitespace=true\] `boolean` - Preserve whitespace in output  
+  - \[ignoreUndefinedTags=false\] `boolean` - Ignore dust tags undefined in the context object.Does not work with paths e.g. obj.subobj  
+  - \[helper=''\] `String` - A dustjs helper package to load.Only 'dustjs-helpers' is supported in v0.0.0.  
 
 **Type**: `name`  
 **Returns**: `through2` - readable-stream/transform  
