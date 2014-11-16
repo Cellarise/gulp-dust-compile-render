@@ -10,7 +10,7 @@ A gulp task to compile and render dust templates based on a provided context obj
   - \[partialsGlob=""\] `string` - A glob pattern for the dust templates to be loaded as partialsthat can be referenced in dust templates  
   - \[preserveWhitespace=true\] `boolean` - Preserve whitespace in output  
   - \[ignoreUndefinedTags=false\] `boolean` - Ignore dust tags undefined in the context object.Does not work with paths e.g. obj.subobj  
-  - \[helper=''\] `String` - A dustjs helper package to load.Only 'dustjs-helpers' is supported in v0.0.0.  
+  - \[helper=''\] `String` - A dustjs helper package to load.  To load the dustjs helpers pass'dustjs-helpers'.  Note only 'dustjs-helpers' is loaded as a dependency of this package.  
 
 **Type**: `name`  
 **Returns**: `through2` - readable-stream/transform  

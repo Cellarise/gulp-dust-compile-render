@@ -36,7 +36,7 @@ A gulp task to compile and render dust templates based on a provided context obj
   - \[partialsGlob=""\] `string` - A glob pattern for the dust templates to be loaded as partialsthat can be referenced in dust templates  
   - \[preserveWhitespace=true\] `boolean` - Preserve whitespace in output  
   - \[ignoreUndefinedTags=false\] `boolean` - Ignore dust tags undefined in the context object.Does not work with paths e.g. obj.subobj  
-  - \[helper=''\] `String` - A dustjs helper package to load.Only 'dustjs-helpers' is supported in v0.0.0.  
+  - \[helper=''\] `String` - A dustjs helper package to load.  To load the dustjs helpers pass'dustjs-helpers'.  Note only 'dustjs-helpers' is loaded as a dependency of this package.  
 
 **Type**: `name`  
 **Returns**: `through2` - readable-stream/transform  
@@ -86,6 +86,18 @@ var version = "0.0.0";
     <th style="width:80px;text-align:left;">ID</th>
     <th style="text-align:left;">Summary</th>
   </tr>
+    
+      <tr>
+        <td colspan=4><strong>Version: 0.2.1 - released 2014-11-16</strong></td>
+      </tr>
+        
+          <tr>
+            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
+            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDGDCR-18</td>
+            <td>Package: Correct readme description of helper option</td>
+          </tr>
+        
     
       <tr>
         <td colspan=4><strong>Version: 0.2.0 - released 2014-11-16</strong></td>
