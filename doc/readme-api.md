@@ -2,7 +2,6 @@
 <a name="module_gulp-dust-compile-render"></a>
 #gulp-dust-compile-render
 A gulp task to compile and render dust templates based on a provided context object.
-
 **Params**
 
 - context `Object` - Context object containing properties referenced in dust templates.NOTE: the context object will be set upon instantiating the function.Pass an object as the context and add properties to the object postinstantiating the function but prior to executing the gulp pipe.  
@@ -45,7 +44,5 @@ var name = "gulp-dust-compile-render";
 var description = "A gulp task to compile and render dust templates based on a provided context object.";
 var version = "0.0.0";
 ```
-
-
 
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*.
