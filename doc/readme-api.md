@@ -1,18 +1,18 @@
-# API
+## API
 <a name="module_gulp-dust-compile-render"></a>
-#gulp-dust-compile-render
+### gulp-dust-compile-render ⇒ <code>through2</code>
 A gulp task to compile and render dust templates based on a provided context object.
-**Params**
+**Returns**: <code>through2</code> - readable-stream/transform  
 
-- context `Object` - Context object containing properties referenced in dust templates.NOTE: the context object will be set upon instantiating the function.Pass an object as the context and add properties to the object postinstantiating the function but prior to executing the gulp pipe.  
-- opts `Object` - Task configuration options  
-  - \[partialsGlob=""\] `string` - A glob pattern for the dust templates to be loaded as partialsthat can be referenced in dust templates  
-  - \[preserveWhitespace=true\] `boolean` - Preserve whitespace in output  
-  - \[ignoreUndefinedTags=false\] `boolean` - Ignore dust tags undefined in the context object.Does not work with paths e.g. obj.subobj  
-  - \[helper=''\] `String` - A dustjs helper package to load.  To load the dustjs helpers pass'dustjs-helpers'.  Note only 'dustjs-helpers' is loaded as a dependency of this package.  
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| context | <code>Object</code> |  | Context object containing properties referenced in dust templates. NOTE: the context object will be set upon instantiating the function. Pass an object as the context and add properties to the object post instantiating the function but prior to executing the gulp pipe. |
+| opts | <code>Object</code> |  | Task configuration options |
+| [opts.partialsGlob] | <code>string</code> | <code>&quot;&#x27;&#x27;&quot;</code> | A glob pattern for the dust templates to be loaded as partials that can be referenced in dust templates |
+| [opts.preserveWhitespace] | <code>boolean</code> | <code>true</code> | Preserve whitespace in output |
+| [opts.ignoreUndefinedTags] | <code>boolean</code> | <code>false</code> | Ignore dust tags undefined in the context object. Does not work with paths e.g. obj.subobj |
+| [opts.helper] | <code>String</code> | <code>&#x27;&#x27;</code> | A dustjs helper package to load.  To load the dustjs helpers pass 'dustjs-helpers'.  Note only 'dustjs-helpers' is loaded as a dependency of this package. |
 
-**Type**: `name`  
-**Returns**: `through2` - readable-stream/transform  
 **Example**  
  Given the dust file:
 
@@ -44,5 +44,7 @@ var name = "gulp-dust-compile-render";
 var description = "A gulp task to compile and render dust templates based on a provided context object.";
 var version = "0.0.0";
 ```
+
+-
 
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*.

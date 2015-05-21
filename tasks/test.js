@@ -12,7 +12,7 @@
 module.exports = function testTasks(gulp, context) {
   var mocha = require("gulp-mocha");
   var mkdirp = require("mkdirp");
-  var istanbul = require("gulp-istanbul-custom-reports");
+  var istanbul = require("gulp-istanbul");
   var glob = require("glob");
   var path = require("path");
   var _ = require("underscore");
@@ -53,15 +53,14 @@ module.exports = function testTasks(gulp, context) {
       }))
       .on("error", handleError)
       .pipe(istanbul.writeReports({
-        "reporters": ["html", "clover-limits", "json-summary"],
+        "coverageVariable": "__cpmCoverage__",
+        "reporters": ["html", require("istanbul-reporter-clover-limits"), "json-summary"],
         "reportOpts": {
           "dir": cwd + "/" + directories.reports + "/code-coverage",
           "watermarks": pkg.config.coverage.watermarks
         }
       }));
   };
-
-  istanbul.registerReport(require("istanbul-reporter-clover-limits"));
 
   /**
    * A gulp build task to instrument files.
@@ -81,7 +80,9 @@ module.exports = function testTasks(gulp, context) {
      * Make sure all these tasks do not require local references as defined above.
      */
     return gulp.src(sourceGlobStr)
-      .pipe(istanbul()); // Covering files - note: finish event called when finished (not end event)
+      .pipe(istanbul({"coverageVariable": "__cpmCoverage__"}))
+      .pipe(istanbul.hookRequire()); // Force `require` to return covered files
+        // Covering files - note: finish event called when finished (not end event)
   });
 
   /**
