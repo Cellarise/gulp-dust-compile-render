@@ -2,17 +2,18 @@
   "author": "John Barry",
   "name": "gulp-dust-compile-render",
   "description": "A gulp task to compile and render dust templates based on a provided context object.",
-  "version": "0.2.6",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Cellarise/gulp-dust-compile-render.git"
+    "url": "https://github.com/Cellarise/gulp-dust-compile-render.git"
   },
   "config": {
     "projectCode": "MDGDCR",
-    "build": "61",
-    "buildTimestamp": "2015-06-12T00:10:59.070+10:00",
+    "build": "n/a",
+    "buildTimestamp": "2015-08-25T08:00:47.586Z",
     "adminEmail": "admin@cellarise.com",
     "coverage": {
+      "codeClimate": true,
       "watermarks": {
         "statements": [
           50,
@@ -60,8 +61,7 @@
           "colour": "green"
         }
       }
-    },
-    "private": false
+    }
   },
   "main": "./lib",
   "scripts": {
@@ -91,9 +91,6 @@
     "mkdirp": "^0.5.0"
   },
   "license": "MIT License (MIT)",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
   "directories": {
     "lib": "lib",
     "bin": "bin",

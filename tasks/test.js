@@ -13,6 +13,7 @@ module.exports = function testTasks(gulp, context) {
   var mocha = require("gulp-mocha");
   var mkdirp = require("mkdirp");
   var istanbul = require("gulp-istanbul");
+  var gutil = require("gulp-util");
   var glob = require("glob");
   var path = require("path");
   var R = require("ramda");
@@ -20,6 +21,12 @@ module.exports = function testTasks(gulp, context) {
 
   var handleError = function handleError(err) {
     logger.error(err.toString());
+    if (process.env.CI) {
+      throw new gutil.PluginError({
+        "plugin": "Gulp Mocha",
+        "message": err.toString()
+      });
+    }
     this.emit("end"); //jshint ignore:line
   };
 
@@ -46,7 +53,7 @@ module.exports = function testTasks(gulp, context) {
       logger.info("Set process.env.YADDA_FEATURE_GLOB=" + process.env.YADDA_FEATURE_GLOB);
     }
 
-    return gulp.src(directories.test + "/test.js")
+    return gulp.src(path.resolve(process.cwd(), directories.test + "/test.js"), {"read": false})
       .pipe(mocha({
         "reporter": reporter,
         "timeout": 600000
@@ -54,7 +61,7 @@ module.exports = function testTasks(gulp, context) {
       .on("error", handleError)
       .pipe(istanbul.writeReports({
         "coverageVariable": "__cpmCoverage__",
-        "reporters": ["html", require("istanbul-reporter-clover-limits"), "json-summary"],
+        "reporters": ["html", "lcov", require("istanbul-reporter-clover-limits"), "json-summary"],
         "reportOpts": {
           "dir": cwd + "/" + directories.reports + "/code-coverage",
           "watermarks": pkg.config.coverage.watermarks
