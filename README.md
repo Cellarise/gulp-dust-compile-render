@@ -71,7 +71,7 @@ Then you'll get a compiled and rendered dust file:
 var author = "John Barry";
 var name = "gulp-dust-compile-render";
 var description = "A gulp task to compile and render dust templates based on a provided context object.";
-var version = "0.0.0";
+var version = "0.2.7";
 ```
 
 -
@@ -88,6 +88,18 @@ var version = "0.0.0";
     <th style="width:80px;text-align:left;">ID</th>
     <th style="text-align:left;">Summary</th>
   </tr>
+    
+<tr>
+        <td colspan=4><strong>Version: 0.2.8 - released 2015-11-13</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDGDCR-28</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
+          </tr>
+        
     
 <tr>
         <td colspan=4><strong>Version: 0.2.7 - released 2015-08-25</strong></td>
@@ -363,5 +375,5 @@ MIT License (MIT). All rights not explicitly granted in the license are reserved
 
 Copyright (c) 2015 John Barry
 ## Dependencies
-[gulp-dust-compile-render@0.0.0](&quot;https://github.com/Cellarise/gulp-dust-compile-render&quot;) - &quot;MIT License (MIT)&quot;, 
+[gulp-dust-compile-render@0.2.7](&quot;https://github.com/Cellarise/gulp-dust-compile-render&quot;) - &quot;MIT License (MIT)&quot;, 
 *documented by [npm-licenses](http://github.com/AceMetrix/npm-license.git)*.
