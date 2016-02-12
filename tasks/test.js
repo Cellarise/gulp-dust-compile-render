@@ -28,13 +28,13 @@ module.exports = function testTasks(gulp, context) {
   var mergeFileCoverage = function mergeFileCoverage(first, second) {
     var ret = JSON.parse(JSON.stringify(first)), i;
     delete ret.l; //remove derived info
-    Object.keys(second.s).forEach(function (k) {
+    Object.keys(second.s).forEach(function processkeys(k) {
       ret.s[k] += second.s[k];
     });
-    Object.keys(second.f).forEach(function (k) {
+    Object.keys(second.f).forEach(function processkeys(k) {
       ret.f[k] += second.f[k];
     });
-    Object.keys(second.b).forEach(function (k) {
+    Object.keys(second.b).forEach(function processkeys(k) {
       var retArray = ret.b[k],
         secondArray = second.b[k];
       for (i = 0; i < retArray.length; i += 1) {

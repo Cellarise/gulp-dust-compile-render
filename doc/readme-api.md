@@ -42,7 +42,7 @@ Then you'll get a compiled and rendered dust file:
 var author = "John Barry";
 var name = "gulp-dust-compile-render";
 var description = "A gulp task to compile and render dust templates based on a provided context object.";
-var version = "0.2.7";
+var version = "0.2.8";
 ```
 
 -
