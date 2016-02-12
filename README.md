@@ -71,7 +71,7 @@ Then you'll get a compiled and rendered dust file:
 var author = "John Barry";
 var name = "gulp-dust-compile-render";
 var description = "A gulp task to compile and render dust templates based on a provided context object.";
-var version = "0.0.0";
+var version = "0.2.9";
 ```
 
 -
@@ -394,6 +394,6 @@ MIT License (MIT). All rights not explicitly granted in the license are reserved
 
 Copyright (c) 2015 John Barry
 ## Dependencies
-[gulp-dust-compile-render@0.0.0](&quot;https://github.com/Cellarise/gulp-dust-compile-render&quot;) - &quot;MIT License (MIT)&quot;, 
+[gulp-dust-compile-render@0.2.9](&quot;https://github.com/Cellarise/gulp-dust-compile-render&quot;) - &quot;MIT License (MIT)&quot;, 
 *documented by [npm-licenses](http://github.com/AceMetrix/npm-license.git)*.
 

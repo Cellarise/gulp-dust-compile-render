@@ -10,7 +10,7 @@
   "config": {
     "projectCode": "MDGDCR",
     "build": "68",
-    "buildTimestamp": "2016-02-12T00:01:11.049Z",
+    "buildTimestamp": "2016-02-12T00:12:17.235Z",
     "adminEmail": "admin@cellarise.com",
     "coverage": {
       "codeClimate": true,
