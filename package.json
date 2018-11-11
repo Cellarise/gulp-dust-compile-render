@@ -72,7 +72,7 @@
     "dustjs-helpers": "^1.7.1",
     "glob": "^7.0.0",
     "gulp-util": "^3.0.0",
-    "through2": "^2.0.0"
+    "through2": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.21",
